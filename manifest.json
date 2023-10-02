@@ -1,0 +1,30 @@
+{
+    "name": "Color picker",
+    "description": "Demo Color Picker.",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./Popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./contentScript.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "serviceWorker.js"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
